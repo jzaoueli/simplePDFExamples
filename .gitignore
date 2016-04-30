@@ -1,0 +1,8 @@
+# Generated files
+/generatedPDF/
+
+# IntelliJ
+/out/
+
+# User-specific stuff:
+.idea/
