@@ -15,11 +15,11 @@ public class SetPDFAttributes {
             document.add(new Paragraph("Some content here"));
 
             //Set attributes here
-            document.addAuthor("Lokesh Gupta");
+            document.addAuthor("Jihed Zaoueli");
             document.addCreationDate();
             document.addCreator("HowToDoInJava.com");
             document.addTitle("Set Attribute Example");
-            document.addSubject("An example to show how attrinutes can be added to pdf files.");
+            document.addSubject("An example to show how attributes can be added to pdf files.");
 
             document.close();
             writer.close();

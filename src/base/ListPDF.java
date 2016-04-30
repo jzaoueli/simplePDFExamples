@@ -6,7 +6,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.io.FileOutputStream;
 
 /**
- * generate a PDF file (generatedPDF/ListExample.pdf) with different kind of list.
+ * generate a PDF file (generatedPDF/ListExample.pdf) with different kind of list as Text.
  */
 
 public class ListPDF {
@@ -57,24 +57,24 @@ public class ListPDF {
             zapfDingbatsList.add(new ListItem("Item 3"));
             document.add(zapfDingbatsList);
 
-            //List and Sublist Examples
-            document.add(new Paragraph("\n*****************************List and Sublist Examples*****************************\n"));
+            //List and Sub-list Examples
+            document.add(new Paragraph("\n*****************************List and Sub-list Examples*****************************\n"));
             List nestedList = new List(List.UNORDERED);
             nestedList.add(new ListItem("Item 1"));
 
-            List sublist = new List(true, false, 30);
-            sublist.setListSymbol(new Chunk("", FontFactory.getFont(FontFactory.HELVETICA, 6)));
-            sublist.add("A");
-            sublist.add("B");
-            nestedList.add(sublist);
+            List subList = new List(true, false, 30);
+            subList.setListSymbol(new Chunk("", FontFactory.getFont(FontFactory.HELVETICA, 6)));
+            subList.add("A");
+            subList.add("B");
+            nestedList.add(subList);
 
             nestedList.add(new ListItem("Item 2"));
 
-            sublist = new List(true, false, 30);
-            sublist.setListSymbol(new Chunk("", FontFactory.getFont(FontFactory.HELVETICA, 6)));
-            sublist.add("C");
-            sublist.add("D");
-            nestedList.add(sublist);
+            subList = new List(true, false, 30);
+            subList.setListSymbol(new Chunk("", FontFactory.getFont(FontFactory.HELVETICA, 6)));
+            subList.add("C");
+            subList.add("D");
+            nestedList.add(subList);
 
             document.add(nestedList);
 

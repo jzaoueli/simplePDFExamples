@@ -14,7 +14,7 @@ import java.io.OutputStream;
 
 public class PasswordProtectedPdf {
     private static String USER_PASSWORD = "password";
-    private static String OWNER_PASSWORD = "lokesh";
+    private static String OWNER_PASSWORD = "jihed";
 
     public static void main(String[] args) {
         try {
