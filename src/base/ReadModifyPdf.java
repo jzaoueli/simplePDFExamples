@@ -1,24 +1,22 @@
-package base.imported;
+package base;
 
-import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 
 import java.io.FileOutputStream;
-import java.io.IOException;
 
-public class ReadModifyPdfExample {
+public class ReadModifyPdf {
     public static void main(String[] args) {
         try {
             //Read file using PdfReader
-            PdfReader pdfReader = new PdfReader("HelloWorld.pdf");
+            PdfReader pdfReader = new PdfReader("generatedPDF/HelloWorld.pdf");
 
             //Modify file using PdfReader
-            PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileOutputStream("HelloWorld-modified.pdf"));
+            PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileOutputStream("generatedPDF/HelloWorld-modified.pdf"));
 
-            Image image = Image.getInstance("temp.png");
+            Image image = Image.getInstance("tempFiles/image.png");
             image.scaleAbsolute(100, 50);
             image.setAbsolutePosition(100f, 700f);
 
