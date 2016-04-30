@@ -13,7 +13,7 @@ public class StyingPDF {
         Font yellowFont = FontFactory.getFont(FontFactory.COURIER, 14, Font.BOLD, new CMYKColor(0, 0, 255, 0));
         Document document = new Document();
         try {
-            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("generated/StylingExample.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("generatedPDF/StylingExample.pdf"));
             document.open();
             document.add(new Paragraph("Styling Example"));
 
